@@ -31,7 +31,12 @@ bole.output({
 server.use(logger(bole, 'debug'))
 server.listen(1337)
 ```
-```sh
+```
+$ node server.js
+{"time":"2015-03-13T01:14:38.585Z","hostname":"Yoshuas-MacBook-Pro.local","pid":84297,"level":"debug","name":"log","message":"<--","method":"GET","uri":"/"}
+{"time":"2015-03-13T01:14:38.596Z","hostname":"Yoshuas-MacBook-Pro.local","pid":84297,"level":"debug","name":"log","message":"-->","method":"GET","uri":"/","status":404,"duration":"10ms","length":"-"}
+```
+```
 $ node server.js | ndjson-logrus
 DBUG[0152] [log] <-- method="GET" uri="/"
 DBUG[0152] [log] --> method="GET" uri="/" status=404 duration="10ms" length="-"
