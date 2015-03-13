@@ -17,7 +17,7 @@ function logger (reporter, level) {
 
   // logger generator
   // @param {Function*} next
-  return function* logger (next) {
+  return function * logger (next) {
     const start = new Date()
     const request = {
       message: '<--',
